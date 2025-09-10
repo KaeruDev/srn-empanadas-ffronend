@@ -1,0 +1,154 @@
+:root {
+  /* neutrales */
+  --bg: #faebd3;
+  --surface: #e3d1b9;
+  --surface-2: #d4c2a7;
+  --border: #dccbb5;
+  --text: #603b21;
+  --text-muted: #8b6d50;
+  --white: #ffffff;
+
+  /* marca */
+  --primary: #d28145;
+  --primary-600: #b05f2b;
+  --primary-700: #6d3618;
+
+  --secondary: #acb487;
+  --secondary-600: #767b54;
+  --secondary-700: #53573f;
+
+  --accent: #f3cb89;
+  --accent-600: #ddbe8a;
+  --accent-700: #c3b28d;
+
+  /* estados (por si los necesitas) */
+  --success: #767b54; /* oliva oscuro */
+  --danger: #711305; /* rojo oscuro */
+}
+
+/* ====== BACKGROUND & TEXT ====== */
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.surface-2 {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.muted {
+  color: var(--text-muted);
+}
+
+.btn {
+  --btn-bg: var(--surface-2);
+  --btn-fg: var(--text);
+  --btn-border: var(--border);
+  --btn-bg-hover: var(--surface);
+  --btn-border-hover: var(--border);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.btn:hover {
+  background: var(--btn-bg-hover);
+  border-color: var(--btn-border-hover);
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+
+/* —— variantes de tema (definen los tokens del botón) ——— */
+.btn--primary {
+  --btn-bg: var(--primary);
+  --btn-fg: var(--white);
+  --btn-border: var(--primary-600);
+  --btn-bg-hover: var(--primary-600);
+  --btn-border-hover: var(--primary-700);
+}
+.btn--secondary {
+  --btn-bg: var(--secondary);
+  --btn-fg: var(--white);
+  --btn-border: var(--secondary-600);
+  --btn-bg-hover: var(--secondary-600);
+  --btn-border-hover: var(--secondary-700);
+}
+.btn--accent {
+  --btn-bg: var(--accent);
+  --btn-fg: #2a1b0d; /* buen contraste sobre dorado */
+  --btn-border: var(--accent-600);
+  --btn-bg-hover: var(--accent-600);
+  --btn-border-hover: var(--accent-700);
+}
+/* (opcionales) estados */
+.btn--success {
+  --btn-bg: var(--success);
+  --btn-fg: var(--white);
+  --btn-border: #5d6947;
+  --btn-bg-hover: #5d6947;
+  --btn-border-hover: #49523a;
+}
+.btn--danger {
+  --btn-bg: var(--danger);
+  --btn-fg: var(--white);
+  --btn-border: #5a0e04;
+  --btn-bg-hover: #5a0e04;
+  --btn-border-hover: #3f0a03;
+}
+
+/* —— “tipos” de botón (estilo) ——— */
+/* SOLID (por defecto con las vars de arriba) */
+
+.is-outline {
+  background: transparent;
+  color: var(--btn-bg);
+  border-color: var(--btn-bg);
+}
+.is-outline:hover {
+  background: color-mix(in oklab, var(--btn-bg) 12%, transparent);
+  border-color: var(--btn-border-hover);
+}
+
+.is-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--btn-bg);
+}
+.is-ghost:hover {
+  background: color-mix(in oklab, var(--btn-bg) 10%, transparent);
+}
+
+/* tamaños rápidos */
+.btn--sm {
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+}
+.btn--lg {
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+}

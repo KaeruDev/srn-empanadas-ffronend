@@ -1,0 +1,55 @@
+.form-grid {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.form-grid input[type="text"],
+.form-grid input[type="number"],
+.form-grid select {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background-color: var(--white);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+}
+
+.form-grid input[type="text"]:focus,
+.form-grid input[type="number"]:focus,
+.form-grid select:focus {
+  border-color: var(--primary);
+  outline: none;
+
+}
+
+.is_sold_out {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 14px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 720px) {
+  .form-grid {
+    padding: 12px;
+  }
+}
