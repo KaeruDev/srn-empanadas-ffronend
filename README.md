@@ -16,12 +16,12 @@ cd backend && npm i && cp .env.example .env && cd ..
 # 2) Docker (API + DB)
 docker compose up --build -d
 
-# 3) Frontend (CI4)
+# 3) Frontend (CI4 YA CREADO)
 cd frontend
-composer create-project codeigniter4/appstarter .
-cp env .env
 php spark serve   # http://localhost:8080
 ```
+> Nota: si clonas este repo desde cero y el frontend no trae la carpeta `vendor/`, corre:  
+> `composer install && cp env .env` y luego `php spark serve`.
 
 ## Backend
 - API: `http://localhost:3000`
@@ -64,7 +64,7 @@ curl http://localhost:3000/api/empanadas
 ```
 
 ## Flujo de Git (sugerido)
-- Ramas: `main`, `feat/backend`, `feat/frontend`.
+- Ramas: `main`, `feature/backend`, `feature/frontend`.
 - PR por cada rama → merge a `main`.
 
 ## Problemas comunes
