@@ -1,0 +1,71 @@
+.table-container {
+  overflow-x: auto;
+  padding: 2em;
+}
+
+.table {
+  margin-bottom: 2em;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.table thead th {
+  text-align: left;
+  background: var(--surface);
+  padding: 20px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.table tbody td {
+  padding: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.type-empanada {
+  text-transform: capitalize;
+  font-weight: 600;
+  background-color: var(--secondary-600);
+  color: var(--white);
+  padding: 4px 8px;
+  border-radius: 1em;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+.empanada-name {
+  font-weight: 600;
+}
+
+.stock {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.out-stock {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.actions .btn {
+  margin-right: 6px;
+}
+
+.paginator {
+  margin: 16px 0;
+  text-align: center;
+}
+.paginator button {
+  margin: 0 8px;
+}
+
+.edit {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.del {
+  background-color: var(--danger);
+  color: var(--white);
+}
